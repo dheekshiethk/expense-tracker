@@ -1,0 +1,22 @@
+{
+  "name": "expense-tracker-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check middleware/auth.js && node --check routes/auth.js && node --check routes/users.js && node --check routes/transactions.js && node --check routes/profile.js && node --check models/User.js && node --check models/Session.js && node --check models/Transaction.js && node --check models/WalletProfile.js && node --check utils/passwords.js && node --check scripts/prompts.js && node --check scripts/create-admin.js && node --check scripts/set-admin-credentials.js",
+    "create-admin": "node scripts/create-admin.js",
+    "set-admin-credentials": "node scripts/set-admin-credentials.js"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0"
+  }
+}
